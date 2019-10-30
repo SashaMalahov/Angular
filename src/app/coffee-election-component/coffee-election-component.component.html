@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let candidate of (store.state$ | async).candidates">
+        <span>{{candidate.name}}</span>
+        <span>Votes: {{candidate.votes}}</span>
+        <button (click)="store.addVote(candidate)">Add vote</button>
+    </li>
+</ul>
